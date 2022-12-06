@@ -6,12 +6,9 @@ import { Box } from '../Box';
 import { Section } from '../Section';
 import { ContactForm } from '../ContactForm';
 import {Filter} from '../Filter'
-// import { theme } from 'utils';
-import background from '../../images/background_blue_abstract.jpg';
-// import { flex } from 'styled-system';
+ import background from '../../images/background_blue_abstract.jpg';
+
  
-
-
 const initialContacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
   { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
