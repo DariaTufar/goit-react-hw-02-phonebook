@@ -1,10 +1,19 @@
-export const Filter = ({ handleChangeFilter, filterValue }) => (
+import PropTypes from 'prop-types';
+import { FilterTitle, FilterInput } from './Filter.styled';
+
+export const Filter = ({ handleUpdateFilter, filterValue }) => (
   <div>
-    <p>Find contacts by name</p>
-    <input
+    <FilterTitle>Find contacts by name</FilterTitle>
+    <FilterInput
       name="filter"
-      onChange={handleChangeFilter}
+      onChange={handleUpdateFilter}
       value={filterValue}
-    ></input>
+    ></FilterInput>
   </div>
 );
+
+
+Filter.propTypes = {
+    handleUpdateFilter: PropTypes.func.isRequired,
+    filterValue: PropTypes.string.isRequired,
+};

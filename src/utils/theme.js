@@ -2,30 +2,34 @@ export const theme = {
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
 
   fontSizes: {
-    input: '24px',
-    text: '20px',
-    button: '18px',
+    xs: '12px',
+    s: '14px',
+    m: '16px',
+    l: '32px',
+    xl: '64px',
+    xxl: '128px',
+    xxxl: '256px',
   },
 
   colors: {
-    bgPrimary: '#ffffff',
-    bgLight: '#f3f6f9',
+    bgPrimary: '#2d9db4', // blue green
+    bgLight: '#EFF9FB',  // light blue-green
     bgButton: '#00bcd5',
 
-    label: '#00bcd5',
-    textAccent: '#3c4756',
+    label: '#F5F4F4',  // light grey cultured
+    textAccent: '#C66CBA',   // purple sky magenta
     textPrimary: 'white',
   },
 
   sizes: {
-    buttonWidth: '100px',
-    iconS: '15px',
-    iconM: '20px',
-    input: '300px',
-
-    nameBox: '200px',
-    numberBox: '150px',
-    sectionBox: '500px',
+    xs: '12px',
+    s: '14px',
+    m: '16px',
+    l: '32px',
+    xl: '64px',
+    xxl: '128px',
+    xxxl: '256px',
+    xxxxl: '512 px',
   },
 
   borders: {
@@ -33,12 +37,14 @@ export const theme = {
   },
 
   radii: {
-    primary: '4px',
-    circle: '50%',
+    none: '0',
+    sm: '4px',
+    md: '8px',
+    lg: '16px',
+    round: '50%',
   },
 
   shadows: {
-    primary:
-      'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+    primary: '9px 3px 25px -4px rgba(25,200,226,0.56)',
   },
 };

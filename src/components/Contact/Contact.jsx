@@ -1,5 +1,5 @@
 export const Contact = ({ id, name, number, deleteContact }) => {
-  const handleClickDelete = event => {
+  const handleClickDelete = () => {
     deleteContact(id);
   };
 
