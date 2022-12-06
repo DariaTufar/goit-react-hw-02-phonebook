@@ -13,12 +13,14 @@ export const theme = {
 
   colors: {
     bgPrimary: '#2d9db4', // blue green
-    bgLight: '#EFF9FB',  // light blue-green
+    bgLight: '#EFF9FB', // light blue-green
     bgButton: '#00bcd5',
 
-    label: '#F5F4F4',  // light grey cultured
-    textAccent: '#C66CBA',   // purple sky magenta
+    label: '#F5F4F4', // light grey cultured
+    textAccent: '#C66CBA', // purple sky magenta
     textPrimary: 'white',
+    textError: 'fcab10', // orange
+    delete: '#C66CBA', // orange
   },
 
   sizes: {
@@ -33,7 +35,8 @@ export const theme = {
   },
 
   borders: {
-    primary: `1px solid #e5eaf1`,
+      primary: `1px solid #e5eaf1`,
+      accent:  ' 2px outset rgba(25,200,226,0.56)',
   },
 
   radii: {

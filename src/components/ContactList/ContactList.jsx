@@ -1,9 +1,10 @@
 
 import { Contact } from '../Contact';
+import { ContactsUl } from './ContactList.styled';
 
 export const ContactList = ({ filteredContacts, deleteContact }) => {
     return (
-        <ul>
+        <ContactsUl>
             {filteredContacts.map( contact  => (
                 <Contact key={contact.id}
                     id={contact.id}
@@ -13,6 +14,6 @@ export const ContactList = ({ filteredContacts, deleteContact }) => {
                 />
             )
             )}
-        </ul>
+        </ContactsUl>
     )
 }

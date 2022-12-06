@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box } from 'components/Box';
+// import {theme} from '../../utils'
 
 export const Section = ({ title,  children }) => (
   <Box
@@ -8,9 +9,9 @@ export const Section = ({ title,  children }) => (
     flexDirection="column"
     justifyContent="center"
     alignItems="center"
-   
+     
   >
-    <h2>{title}</h2>
+    <h2 >{title}</h2>
     {children}
   </Box>
 );

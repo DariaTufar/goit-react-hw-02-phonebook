@@ -6,6 +6,10 @@ import { Box } from '../Box';
 import { Section } from '../Section';
 import { ContactForm } from '../ContactForm';
 import {Filter} from '../Filter'
+// import { theme } from 'utils';
+import background from '../../images/background_blue_abstract.jpg';
+// import { flex } from 'styled-system';
+ 
 
 
 const initialContacts = [
@@ -21,6 +25,7 @@ export class App extends Component {
     filter:'',
   };
 
+//----------------------------------
   addContact = ({ name, number }) => {
     const searchingName = name.toLowerCase().trim();
     const foundName = this.state.contacts.find(
@@ -28,7 +33,7 @@ export class App extends Component {
     );
 
     if (foundName) {
-      return alert(' ${foundName} is already in contacts');
+      return alert(`${name} is already in contacts`);
     }
 
     const newContact = {
@@ -48,6 +53,7 @@ export class App extends Component {
       return { contacts };
     });
   };
+
   handleUpdateFilter = event => {
     const filter = event.target.value.toLowerCase();
     this.setState({ filter });
@@ -60,20 +66,32 @@ export class App extends Component {
       ? contacts.filter(contact => contact.name.toLowerCase().includes(filter))
       : contacts;
   };
-
+//----------------------------------------
   render() {
     return (
-      <Box>
-        <Section title="Phonebook">
-          <ContactForm addContact={this.addContact} />
-        </Section>
-
-        <Section title="Contacts">
-
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+      
+      >
+        <Box
+          style={{
+            backgroundImage: `url(${background})`, 
+            backgroundSize: 'cover'
+          }}
+          
+        >
+          <Section title="Phonebook">
+            <ContactForm addContact={this.addContact} />
+          </Section>
+        </Box>
+        <Section title="Contacts"  >
           <Filter
             handleUpdateFilter={this.handleUpdateFilter}
-            filteredValue={this.state.filter} />
-          
+            filteredValue={this.state.filter}
+          />
+
           <ContactList
             filteredContacts={this.showFilteredContacts()}
             deleteContact={this.deleteContact}
